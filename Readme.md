@@ -11,7 +11,11 @@
 
 ## Navigation.
 
-npm install @react-navigation/native @react-navigation/native-stack
-
-
-npm install react-native-screens react-native-safe-area-context react-native-reanimated react-native-gesture-handler react-native-community/masked-view
+npm install
+- @react-navigation/native 
+- @react-navigation/native-stack
+- react-native-screens 
+- react-native-safe-area-context 
+- react-native-reanimated 
+- react-native-gesture-handler 
+- react-native-community/masked-view
