@@ -1,8 +1,8 @@
-import { Text,SafeAreaView,View,StyleSheet,TextInput,Image,ScrollView} from 'react-native'
+import { Text,SafeAreaView,View,StyleSheet,TextInput,Image,ScrollView,FlatList} from 'react-native'
 import React ,{useState}from 'react'
 
 
-const DATA = [
+const Data = [
   {
     id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
     title: 'First Item',
@@ -20,8 +20,8 @@ const DATA = [
 const App=()=>{
   const [text, settext] = useState();
     return (
-       <ScrollView>
-{/*       <View style={styles.container}>
+  /*      <ScrollView>
+      <View style={styles.container}>
         <Text style={styles.title}>App Books {text}</Text>
         <TextInput
         style={styles.input}
@@ -30,13 +30,13 @@ const App=()=>{
         onChangeText={(value)=>settext(value)}
       />
       <Image source={require('./assets/favicon.png')}/>
-      </View>  */} 
+      </View>
+      </ScrollView>  */
       <FlatList
-        data={DATA}
+        data={Data}
         renderItem={(item)=><Text>{item.item.title}</Text>}
         keyExtractor={item => item.id.toString()}
       />
-      </ScrollView> 
     )
 }
 const styles = StyleSheet.create({
