@@ -8,6 +8,15 @@
 
 
 ## Les 8 Composonts
+- Text
+- View
+- StyleSheet
+- TextInput
+- Image
+- ScrollView
+- FlatList
+- TouchableOpacity
+- - SafeAreaView
 
 ## Navigation.
 
