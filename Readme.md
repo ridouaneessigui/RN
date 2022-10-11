@@ -27,4 +27,10 @@ npm install
 - react-native-safe-area-context 
 - react-native-reanimated 
 - react-native-gesture-handler 
-- react-native-community/masked-view
+- @react-native-community/masked-view
+
+
+HomeScreen
+ProfileScreen
+welcomScreen
+loginScreen

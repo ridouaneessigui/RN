@@ -1,8 +1,13 @@
 import { Text,SafeAreaView,View,StyleSheet,TextInput,Image,ScrollView,FlatList} from 'react-native'
 import React ,{useState}from 'react'
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+const stack=createStackNavigator();
+import LoginScreen from './screens/LoginScreen'
+import WelcomeScreen from './screens/WelcomeScreen'
+console.log('stack',stack);
 
-
-const Data = [
+/* const Data = [
   {
     id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
     title: 'First Item',
@@ -15,10 +20,10 @@ const Data = [
     id: '58694a0f-3da1-471f-bd96-145571e29d72',
     title: 'Third Item',
   },
-];
+]; */
 
 const App=()=>{
-  const [text, settext] = useState();
+  /* const [text, settext] = useState(); */
     return (
   /*      <ScrollView>
       <View style={styles.container}>
@@ -32,11 +37,19 @@ const App=()=>{
       <Image source={require('./assets/favicon.png')}/>
       </View>
       </ScrollView>  */
-      <FlatList
+/*       <FlatList
         data={Data}
         renderItem={(item)=><Text>{item.item.title}</Text>}
         keyExtractor={item => item.id.toString()}
-      />
+             <View style={styles.container}>
+      </View>
+      /> */
+      <NavigationContainer>
+        <stack.Navigator>
+          <stack.Screen name="Welcome" component={WelcomeScreen}/>
+          <stack.Screen name="Login" component={LoginScreen}/>
+        </stack.Navigator>
+      </NavigationContainer>
     )
 }
 const styles = StyleSheet.create({
